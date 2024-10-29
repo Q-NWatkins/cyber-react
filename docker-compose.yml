@@ -1,0 +1,13 @@
+version: '3'
+services:
+  frontend:
+    build: ./cyber-react-flask-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./cyber-flask-api
+    ports:
+      - "3002:3002"
